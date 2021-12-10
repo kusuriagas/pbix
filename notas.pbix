@@ -1,0 +1,7 @@
+ingresoPaises = 
+ADDCOLUMNS(
+    VALUES(Pedidos[País]),
+    "ingresos",[Ingresos Tot],
+    "costos",CALCULATE(SUM(Pedidos[Costo Total]))
+    )
+    
