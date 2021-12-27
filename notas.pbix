@@ -1,7 +1,18 @@
-ingresoPaises = 
+
+ADDCOLUMNS(<table>, <name>, <expression>[, <name>, <expression>]…)  
+
+
+ingresoycostosxPaises = 
 ADDCOLUMNS(
     VALUES(Pedidos[País]),
     "ingresos",[Ingresos Tot],
     "costos",CALCULATE(SUM(Pedidos[Costo Total]))
     )
     
+
+IngresoBO1 = CALCULATE([Ingresos Tot],
+                TREATAS(ROW("SKU","B01"),Pedidos[SKU])
+                
+                )
+                
+ 
