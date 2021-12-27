@@ -16,3 +16,8 @@ IngresoBO1 = CALCULATE([Ingresos Tot],
                 )
                 
  
+limitecosto = CALCULATE(SUM(LimiteCosto[Límete Costo]) ,
+                TREATAS(VALUES(CategoriaDeProductos[Categoría de Producto]) , LimiteCosto[Categoría de Producto]),
+                TREATAS(VALUES(Calendario[Año]),LimiteCosto[Año]),
+                TREATAS(VALUES(Calendario[Trimestre]),LimiteCosto[Trimestre])
+                )
