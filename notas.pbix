@@ -21,3 +21,10 @@ limitecosto = CALCULATE(SUM(LimiteCosto[Límete Costo]) ,
                 TREATAS(VALUES(Calendario[Año]),LimiteCosto[Año]),
                 TREATAS(VALUES(Calendario[Trimestre]),LimiteCosto[Trimestre])
                 )
+
+#SELECCIONAR COLUMNAS
+NewTabla = 
+        SELECTCOLUMNS(Pedidos,
+        "Pais",Pedidos[País],
+        "Tipo de Compra",Pedidos[Tipo de Compra]
+        )  
